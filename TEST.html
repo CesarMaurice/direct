@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <title>test page</title>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="button" title="go to top page"><i class="fa-solid fa-arrow-up"></i></button>
+        <div style="background-color:lightgrey;padding:20px 20px 2500px">
+          <strong>when the user starts to scroll the page</strong>.</div>
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            display: flex;
+        }
+        button {
+    background-color: gray;
+    backdrop-filter: blur(10px);
+    width: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    bottom: 20px;
+    right: 30px;
+    position: fixed;
+  }
+    </style>
+    </body>
+    <script>
+        let mybutton = document.getElementById('button');
+        window.onscroll = function() {
+    if (document.body.scrollTop > 1500|| document.documentElement.scrollTop > 1500) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+};
+
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+}
+    </script>
+</html>

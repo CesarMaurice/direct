@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body background="login wallpaper.jpg"></body>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <div class="form-toggle">
+      <button onclick="toggleForm()">Login</button>
+      <button onclick="toggleForm()">Sign Up</button>
+    </div>
+
+    <form id="login-form" action="#" method="post">
+      <h2>Login</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label type="tel" id="phone"
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <form id="signup-form" action="#" method="post" style="display: none;">
+      <h2>Sign Up</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="signup-password">Password:</label>
+      <input type="password" id="signup-password" name="password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+  <script>
+    function toggleForm() {
+      const loginForm = document.getElementById("login-form");
+      const signupForm = document.getElementById("signup-form");
+
+      if (loginForm.style.display === "block") {
+        loginForm.style.display = "none";
+        signupForm.style.display = "block";
+      } else {
+        loginForm.style.display = "block";
+        signupForm.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
